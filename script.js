@@ -1,16 +1,18 @@
 function atualizar(){
 
-let clientes = Math.floor(Math.random()*100)
-
-let vendas = Math.floor(Math.random()*50)
-
-let faturamento = Math.floor(Math.random()*10000)
+let clientes = 124
+let vendas = 89
+let faturamento = 24590
 
 document.getElementById("clientes").innerText = clientes
 
 document.getElementById("vendas").innerText = vendas
 
-document.getElementById("faturamento").innerText = "R$ " + faturamento
+document.getElementById("faturamento").innerText =
+faturamento.toLocaleString("pt-BR", {
+style:"currency",
+currency:"BRL"
+})
 
 }
 
